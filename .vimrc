@@ -1,5 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,16 +17,7 @@ Plugin 'tomasr/molokai'
 " vim-ariline插件
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-
-
-
-
-
-
-
-
-
+Plugin 'powerline/fonts'
 
 
 call vundle#end()            " required
@@ -50,7 +39,9 @@ colorscheme molokai
 let g:molokai_original = 1
 
 " airline设置
-set laststatus=2
+set laststatus=2  " 开启显示，常驻
+let g:airline#extensions#tabline#enabled = 1  " 顶部栏
 let g:airline_theme='molokai'
-"let g:airline_powerline_fonts = 1
 
+let g:airline_powerline_fonts = 1
+"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
