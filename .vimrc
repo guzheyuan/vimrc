@@ -19,8 +19,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'powerline/fonts'
 Plugin 'Valloric/YouCompleteMe'
-
-
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,3 +47,7 @@ let g:airline_theme='luna' " airline配色
 let g:airline_powerline_fonts = 1  " 使用powerline的特殊字体
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12  " 使用source code pro for powerline字体，大小为12
 
+" nerdtree
+" autocmd vimenter * NERDTree
+map <F2> :NERDTreeToggle<CR>
+" map <Leader>n <plug>NERDTreeTabsToggle<CR>
