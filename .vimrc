@@ -18,6 +18,8 @@ Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'powerline/fonts'
+Plugin 'Valloric/YouCompleteMe'
+
 
 
 call vundle#end()            " required
@@ -41,7 +43,7 @@ let g:molokai_original = 1
 " airline设置
 set laststatus=2  " 开启显示，常驻
 let g:airline#extensions#tabline#enabled = 1  " 顶部栏
-let g:airline_theme='molokai'
+let g:airline_theme='luna' " airline配色
+let g:airline_powerline_fonts = 1  " 使用powerline的特殊字体
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12  " 使用source code pro for powerline字体，大小为12
 
-let g:airline_powerline_fonts = 1
-"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
