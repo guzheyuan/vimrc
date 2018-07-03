@@ -1,5 +1,7 @@
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
 
 " 开始安装插件
 call vundle#begin()
@@ -10,15 +12,20 @@ Plugin 'vim-airline/vim-airline-themes'    " airline主题包
 Plugin 'powerline/fonts'                   " airline字体包
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin indent on    " required, To ignore plugin indent changes, instead use:filetype plugin on
 
 " vim相关设置
 set backspace=2        " 兼容backspace设置
 set nu                 " 开启行号
-set foldmethod=syntax  " 折叠：按语法
+set si                 " 开启smarttab
+set et                 " 开启expandtab
+set sw=4               " shiftwidth=4
+set ts=4
 syntax on              " 开启语法高亮
+
+set guifont=Source_Code_Pro_for_Powerline:h12 
 
 " 主题molokai相关设置
 colorscheme molokai
@@ -45,10 +52,10 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " syntastic相关配置
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
